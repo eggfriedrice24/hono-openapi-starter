@@ -1,16 +1,11 @@
-import { serve } from "@hono/node-server";
-import { Hono } from "hono";
+import { serve } from "@hono/node-server"
 
-const app = new Hono();
+import app from "./lib/create-app"
 
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
-
-const port = 3000;
-console.log(`Server is running on http://localhost:${port}`);
+const port = 3000
+console.log(`Server is running on http://localhost:${port}`)
 
 serve({
   fetch: app.fetch,
   port,
-});
+})

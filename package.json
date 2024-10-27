@@ -2,13 +2,22 @@
   "name": "hono-openapi-starter",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "start": "node ./dist/src/index.js",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint --fix",
+    "test": "cross-env NODE_ENV=test vitest",
+    "build": "tsc && tsc-alias"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.2",
     "hono": "^4.6.7"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/eslint": "^9.6.1",
     "@types/node": "^20.17.1",
     "@typescript-eslint/eslint-plugin": "^8.11.0",
@@ -17,6 +26,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-drizzle": "^0.2.3",
     "prettier": "^3.3.3",
-    "tsx": "^4.7.1"
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.3"
   }
 }
