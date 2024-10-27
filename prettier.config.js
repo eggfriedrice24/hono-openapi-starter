@@ -1,4 +1,4 @@
-/** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
+/** @type {import('prettier').Config} */
 const config = {
   endOfLine: "lf",
   semi: false,
@@ -10,28 +10,21 @@ const config = {
     "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@/app/(.*)$",
-    "^@/config/(.*)$",
     "^@/lib/(.*)$",
-    "^@/hooks/(.*)$",
-    "^@/components/ui/(.*)$",
-    "^@/components/(.*)$",
-    "^@/styles/(.*)$",
+    "^@/middlewares/(.*)$",
+    "^@/openapi/(.*)$",
     "",
     "^[./]",
     "",
     "^types$",
     "^@/types/(.*)$",
-
   ],
   importOrderSeparation: false,
   importOrderSortSpecifiers: true,
   importOrderBuiltinModulesToTop: true,
-  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  importOrderParserPlugins: ["typescript", "decorators-legacy"],
   importOrderMergeDuplicateImports: true,
   importOrderCombineTypeAndValueImports: true,
-  tailwindAttributes: ["tw"],
-  tailwindFunctions: ["cva"],
   plugins: [
     "@ianvs/prettier-plugin-sort-imports",
   ],

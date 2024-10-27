@@ -1,15 +1,13 @@
-import createApp from "@/lib/create-app";
+import createApp from "@/lib/create-app"
 
-const app = createApp();
+const app = createApp()
 
-
-const routes = [
-] as const;
+const routes = [] as const
 
 routes.forEach((route) => {
-  app.route("/", route);
-});
+  app.route("/", route)
+})
 
-export type AppType = typeof routes[number];
+export type AppType = (typeof routes)[number]
 
-export default app;
+export default app
