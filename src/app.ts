@@ -1,13 +1,17 @@
+import index from "@/routes/index.route"
+import tasks from "@/routes/tasks/tasks.index"
 import { createRoute } from "@hono/zod-openapi"
 import z from "zod"
 
-import createApp, { createRouter } from "@/lib/create-app"
+import configureOpenAPI from "@/lib/configure-open-api"
+import createApp from "@/lib/create-app"
 import * as HttpStatusCodes from "@/lib/http-status-codes"
 
 import { jsonContent } from "./openapi/helpers"
 
 const app = createApp()
 
+configureOpenAPI(app)
 
 export const hello = createRoute({
   path: "/",
@@ -18,12 +22,7 @@ export const hello = createRoute({
   },
 })
 
- const _app = app.route(
-  "/",
-  createRouter().openapi(hello, (c) => {
-    return c.text("hello")
-  })
-)
+const _app = app.route("/", index).route("/", tasks)
 
 export type AppType = typeof _app
 
