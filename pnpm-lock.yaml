@@ -11,6 +11,12 @@ importers:
       '@hono/node-server':
         specifier: ^1.13.2
         version: 1.13.2(hono@4.6.7)
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      dotenv-expand:
+        specifier: ^11.0.6
+        version: 11.0.6
       hono:
         specifier: ^4.6.7
         version: 4.6.7
@@ -535,6 +541,14 @@ packages:
 
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
+
+  dotenv-expand@11.0.6:
+    resolution: {integrity: sha512-8NHi73otpWsZGBSZwwknTXS5pqMOrk9+Ssrna8xCaxkzEpU9OTf9R5ArQGVw03//Zmk9MOwLPng9WwndvpAJ5g==}
+    engines: {node: '>=12'}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
 
   electron-to-chromium@1.5.47:
     resolution: {integrity: sha512-zS5Yer0MOYw4rtK2iq43cJagHZ8sXN0jDHDKzB+86gSBSAI4v07S97mcq+Gs2vclAxSh1j7vOAHxSVgduiiuVQ==}
@@ -1479,6 +1493,12 @@ snapshots:
   deep-is@0.1.4: {}
 
   defu@6.1.4: {}
+
+  dotenv-expand@11.0.6:
+    dependencies:
+      dotenv: 16.4.5
+
+  dotenv@16.4.5: {}
 
   electron-to-chromium@1.5.47: {}
 
