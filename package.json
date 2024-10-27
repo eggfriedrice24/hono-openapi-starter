@@ -23,8 +23,10 @@
     "drizzle-zod": "^0.5.1",
     "hono": "^4.6.7",
     "hono-pino": "^0.4.0",
+    "pg": "^8.13.1",
     "pino": "^9.5.0",
     "pino-pretty": "^11.3.0",
+    "postgres": "^3.4.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -32,9 +34,11 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/eslint": "^9.6.1",
     "@types/node": "^20.17.1",
+    "@types/pg": "^8.11.10",
     "@typescript-eslint/eslint-plugin": "^8.11.0",
     "@typescript-eslint/parser": "^8.11.0",
     "cross-env": "^7.0.3",
+    "drizzle-kit": "^0.26.2",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-drizzle": "^0.2.3",
