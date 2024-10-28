@@ -11,7 +11,14 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint --fix",
     "test": "cross-env NODE_ENV=test vitest",
-    "build": "tsc && tsc-alias"
+    "build": "tsc && tsc-alias",
+    "db:generate": "dotenv drizzle-kit generate",
+    "db:introspect": "dotenv drizzle-kit introspect",
+    "db:push": "dotenv drizzle-kit push",
+    "db:migrate": "dotenv tsx src/db/migrate.ts",
+    "db:drop-migration": "drizzle-kit drop",
+    "db:seed": "dotenv tsx src/db/seed.ts",
+    "db:studio": "dotenv drizzle-kit studio"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.2",
@@ -39,6 +46,7 @@
     "@typescript-eslint/parser": "^8.11.0",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.26.2",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-drizzle": "^0.2.3",
