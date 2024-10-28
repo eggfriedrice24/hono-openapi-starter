@@ -89,6 +89,7 @@ export const remove: AppRouteHandler<RemoveRoute> = async (c) => {
   const { id } = c.req.valid("param")
   const result = await db.delete(tasks).where(eq(tasks.id, id))
 
+  // @ts-expect-error sadsa
   if (result.rowsAffected === 0) {
     return c.json(
       {
