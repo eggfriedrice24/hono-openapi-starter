@@ -28,3 +28,7 @@ fi
 
 # Success message
 echo "✅ Setup complete! 🎉 You can now configure your new repository and start development."
+
+# Remove the script itself
+echo "🗑️ Removing setup.sh script..."
+rm -- "$0"
