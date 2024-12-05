@@ -63,11 +63,11 @@ export default function configureOpenAPI(app: AppOpenAPI) {
       },
       servers: [
         {
-          url: "http://localhost:2333",
+          url: "http://localhost:2222",
           description: "Local development server",
         },
         {
-          url: "https://api.efr.com",
+          url: "https://example-api.efr.com",
           description: "Production server",
         },
       ],
