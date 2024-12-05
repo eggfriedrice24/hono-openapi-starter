@@ -33,8 +33,12 @@ export const tasks = pgTable("tasks", {
     .$onUpdate(() => new Date()),
 })
 
+// Select
+export type Task = typeof tasks.$inferSelect
 export const selectTasksSchema = createSelectSchema(tasks)
 
+// Insert
+export type NewTask = typeof tasks.$inferInsert
 export const insertTasksSchema = createInsertSchema(tasks, {
   title: (schema) => schema.title.min(1).max(500),
 })
@@ -47,4 +51,5 @@ export const insertTasksSchema = createInsertSchema(tasks, {
     updatedAt: true,
   })
 
+// Update
 export const patchTasksSchema = insertTasksSchema.partial()
