@@ -1,8 +1,8 @@
-import { notFound, onError, serveEmojiFavicon } from "@/middlewares"
 import { defaultHook } from "@/openapi"
 import { OpenAPIHono } from "@hono/zod-openapi"
 
-import { pinoLogger } from "@/middlewares/pino-logger"
+import { notFound, onError, serveEmojiFavicon } from "@/lib/middlewares"
+import { pinoLogger } from "@/lib/middlewares/pino-logger"
 
 import type { AppBindings, AppOpenAPI } from "./types"
 
