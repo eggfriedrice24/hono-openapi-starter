@@ -1,9 +1,9 @@
-import { defaultHook } from "@/openapi"
 import { OpenAPIHono } from "@hono/zod-openapi"
 
 import { notFound, onError, serveEmojiFavicon } from "@/lib/middlewares"
 import { pinoLogger } from "@/lib/middlewares/pino-logger"
 import { corsMiddleware } from "@/middlewares/cors.middleware"
+import { defaultHook } from "@/openapi"
 
 import type { AppBindings, AppOpenAPI } from "./types"
 

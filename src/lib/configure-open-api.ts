@@ -1,7 +1,7 @@
-import env from "@/env"
 import { apiReference } from "@scalar/hono-api-reference"
 
 import { type AppOpenAPI } from "@/lib/types"
+import env from "@/env"
 
 import packageJSON from "../../package.json" with { type: "json" }
 

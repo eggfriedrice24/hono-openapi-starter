@@ -6,28 +6,27 @@ const config = {
   tabWidth: 2,
   trailingComma: "es5",
   importOrder: [
-    "^(react/(.*)$)|^(react$)",
-    "^(next/(.*)$)|^(next$)",
-    "<THIRD_PARTY_MODULES>",
-    "",
-    "^@/lib/(.*)$",
+    '<BUILTIN_MODULES>',      // Node builtin modules
+    "^(hono/(.*)$)|^(hono$)", // Match hono imports first
+    "<THIRD_PARTY_MODULES>",  // Third-party modules
+    "",                       // Blank line
+    "^@/lib/(.*)$",           // Custom aliases
     "^@/middlewares/(.*)$",
     "^@/openapi/(.*)$",
-    "",
-    "^[./]",
-    "",
-    "^types$",
-    "^@/types/(.*)$",
+    "^@/(.*)$",
+    "",                       // Blank line
+    "^[./]",                  // Relative imports
+    "",                       // Blank line
+    "^types$",                // Special `types` import
+    "^@/types/(.*)$",         // Custom types directory
   ],
-  importOrderSeparation: false,
+  importOrderSeparation: true, // Ensure blank lines between groups
   importOrderSortSpecifiers: true,
   importOrderBuiltinModulesToTop: true,
   importOrderParserPlugins: ["typescript", "decorators-legacy"],
   importOrderMergeDuplicateImports: true,
   importOrderCombineTypeAndValueImports: true,
-  plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-  ],
+  plugins: ["@ianvs/prettier-plugin-sort-imports"],
 }
 
 export default config
