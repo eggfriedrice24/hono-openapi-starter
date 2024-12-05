@@ -19,25 +19,26 @@
 
 Here’s an overview of the project structure:
 
-```
+```plaintext
 .
 ├── drizzle.config.ts         # Drizzle ORM configuration
-├── setup.sh                  # Setup script to initialize the project
+├── package.json              # Dependencies and project metadata
+├── pnpm-lock.yaml            # Lockfile for PNPM
+├── prettier.config.js        # Prettier configuration
+├── README.md                 # Project documentation
+├── setup.sh                  # Project setup script
+├── tsconfig.json             # TypeScript configuration
 ├── src/                      # Source code
-│   ├── app.ts                # App initialization
-│   ├── db/                   # Database configurations
-│   │   ├── schema.ts         # Database schema
-│   │   └── migrations/       # Database migrations
-│   ├── env.ts                # Environment variable handling
-│   ├── lib/                  # Utility functions
+│   ├── db/                   # Database configurations and migrations
+│   │   ├── migrations/       # SQL migration files
+│   │   ├── seeds/            # Seed data files
+│   │   └── schema.ts         # Database schema
+│   ├── lib/                  # Utility functions and constants
 │   ├── middlewares/          # Middleware implementations
 │   ├── openapi/              # OpenAPI schemas and helpers
-│   ├── routes/               # API route handlers
-│   └── index.ts              # Entry point
-├── package.json              # Dependencies and scripts
-├── prettier.config.js        # Prettier configuration
-├── tsconfig.json             # TypeScript configuration
-└── README.md                 # Project documentation
+│   │   ├── helpers/          # OpenAPI helper functions
+│   │   └── schemas/          # OpenAPI schemas
+│   └── routes/               # API route handlers
 ```
 
 ---
